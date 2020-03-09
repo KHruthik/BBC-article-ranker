@@ -1,0 +1,15 @@
+.main-area{
+    max-width: 1000px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.rank-button {
+    float: right;
+    margin-bottom: 40px;
+}
