@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import {Link} from 'react-router-dom'
 
 import Header from './components/Header.js'
 import Article from './components/Article.js'
@@ -14,22 +13,11 @@ import data from './data.json'
 export class App extends Component {
 
   state = {
-    visited: []
-  }
-
-  componentDidMount() {
-    let visitedPages = []
-    for(let i = 0; i < data.length; ++i) {
-      visitedPages.push(false)
-    }
-
-    this.setState({visited: visitedPages})
+    numOfArticlesVisited: 0
   }
 
   visitPage = (index) => {
-    let visitedPages = this.state.visited
-    visitedPages[index] = true
-    this.setState({visited: visitedPages})
+    this.setState({numOfArticlesVisited: this.state.numOfArticlesVisited + 1})
   }
 
   getTitle = (data) => {
@@ -46,23 +34,22 @@ export class App extends Component {
     }
   }
 
-  visitedAllPages = () => {
-    for(let i = 0; i < this.state.visited.length; ++i) {
-      if (this.state.visited.length[i] == false) {
-        return false
-      }
-    }
-    return true
-  }
-
   generateCards = (data) => {
     let tags = []
     for(let i = 0; i < data.length; ++i) {
         let title = this.getTitle(data[i])
         let image = this.getImage(data[i].body)
-        tags.push(<ArticleCard visit={this.visitPage} key={title} id={i} src={image} title={title}/>)
+        tags.push(<ArticleCard visit={this.visitPage} key={i} id={i} src={image} title={title}/>)
     }
     return tags
+  }
+
+  goToRankPage = () => {
+    if (this.state.numOfArticlesVisited === data.length) {
+      window.location.replace("/rank")
+    }else {
+      alert("Read all the articles")
+    }
   }
 
   render() {
@@ -75,7 +62,7 @@ export class App extends Component {
               <main>
                 { this.generateCards(data)}
               </main>
-              <Link className="btn btn-primary rank-button" to="/rank">Rank articles</Link>
+              <button className="btn btn-primary rank-button" onClick={this.goToRankPage}>Rank articles</button>
             </div>
           )} />
           <Route path="/article/:id" component={Article} />
