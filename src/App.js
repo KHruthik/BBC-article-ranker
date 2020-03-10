@@ -5,7 +5,7 @@ import Header from './components/Header.js'
 import Article from './components/Article.js'
 import ArticleCard from './components/ArticleCard.js'
 import ArticleRanker from './components/ArticleRanker.js'
-
+import Message from './components/Message.js'
 import './app.css'
 
 import data from './data.json'
@@ -45,10 +45,10 @@ export class App extends Component {
   }
 
   goToRankPage = () => {
-    if (this.state.numOfArticlesVisited === data.length) {
+    if (this.state.numOfArticlesVisited >= data.length) {
       window.location.replace("/rank")
     }else {
-      alert("Read all the articles")
+      alert("Please read all the articles before ranking")
     }
   }
 
@@ -67,6 +67,7 @@ export class App extends Component {
           )} />
           <Route path="/article/:id" component={Article} />
           <Route path="/rank" component={ArticleRanker} />
+          <Route path="/message/:success" component={Message} />
         </div>
       </Router>
     )
