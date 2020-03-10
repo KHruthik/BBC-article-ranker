@@ -6,6 +6,7 @@ import Article from './components/Article.js'
 import ArticleCard from './components/ArticleCard.js'
 import ArticleRanker from './components/ArticleRanker.js'
 import Message from './components/Message.js'
+
 import './css/app.css'
 
 import data from './data.json'
@@ -16,7 +17,8 @@ export class App extends Component {
     numOfArticlesVisited: 0
   }
 
-  visitPage = (index) => {
+  
+  visitPage = () => {
     this.setState({numOfArticlesVisited: this.state.numOfArticlesVisited + 1})
   }
 
@@ -35,13 +37,13 @@ export class App extends Component {
   }
 
   generateCards = (data) => {
-    let tags = []
+    let cards = []
     for(let i = 0; i < data.length; ++i) {
         let title = this.getTitle(data[i])
         let image = this.getImage(data[i].body)
-        tags.push(<ArticleCard visit={this.visitPage} key={i} id={i} src={image} title={title}/>)
+        cards.push(<ArticleCard visit={this.visitPage} id={i} src={image} title={title}/>)
     }
-    return tags
+    return cards
   }
 
   goToRankPage = () => {

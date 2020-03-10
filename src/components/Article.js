@@ -15,12 +15,16 @@ export class Article extends Component {
         return body.map(tag =>  {
             if (tag.type === 'paragraph') {
                 return this.parseParagraph(tag.model)
+
             }else if (tag.type === 'heading') {
                 return this.parseHeading(tag.model)
+
             }else if (tag.type === 'image') {
                 return this.parseImage(tag.model)
+
             }else if (tag.type === 'list') {
                 return this.parseList(tag.model)
+
             }else {
                 return <h1>Error</h1>
             }
@@ -40,7 +44,7 @@ export class Article extends Component {
     }
 
     parseList = (list) => {
-        if (list.type) {
+        if (list.type == 'unordered') {
             return (
                 <ul>
                     {list.items.map(item => <li>{item}</li>)}
@@ -66,8 +70,5 @@ export class Article extends Component {
         )
     }
 }
-/*
-<h2>{this.props.data.title}</h2>
-{this.parseBody(this.props.data.body)}
-*/
+
 export default Article

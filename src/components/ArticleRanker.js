@@ -15,7 +15,7 @@ export class ArticleRanker extends Component {
         return titles.map(title => <option value={title}>{title}</option>)
     }
 
-    createOptions = () => {
+    createArticleRanker = () => {
         let tableRows = []
         
         for(let i = 0; i < data.length; ++i) {
@@ -62,7 +62,7 @@ export class ArticleRanker extends Component {
             <main className="container-fluid flex-container">
                 <p>Please rank the article in order of most interesting. (1 meaning most interesting and {data.length} meaning least interesting)</p>
                 <table id="ranking-structure">
-                    {this.createOptions()}
+                    {this.createArticleRanker()}
                 </table>
                 <button className="btn btn-primary" onClick={this.submitResponse}>Submit</button>
             </main>
