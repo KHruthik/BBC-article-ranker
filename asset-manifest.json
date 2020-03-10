@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/BBC-article-ranker/static/css/main.a00fab0b.chunk.css",
+    "main.js": "/BBC-article-ranker/static/js/main.4b7808ab.chunk.js",
+    "main.js.map": "/BBC-article-ranker/static/js/main.4b7808ab.chunk.js.map",
+    "runtime-main.js": "/BBC-article-ranker/static/js/runtime-main.cc9a0d80.js",
+    "runtime-main.js.map": "/BBC-article-ranker/static/js/runtime-main.cc9a0d80.js.map",
+    "static/js/2.c46ac76d.chunk.js": "/BBC-article-ranker/static/js/2.c46ac76d.chunk.js",
+    "static/js/2.c46ac76d.chunk.js.map": "/BBC-article-ranker/static/js/2.c46ac76d.chunk.js.map",
+    "index.html": "/BBC-article-ranker/index.html",
+    "precache-manifest.15da225b165ce375aca9b9b171a80e2d.js": "/BBC-article-ranker/precache-manifest.15da225b165ce375aca9b9b171a80e2d.js",
+    "service-worker.js": "/BBC-article-ranker/service-worker.js",
+    "static/css/main.a00fab0b.chunk.css.map": "/BBC-article-ranker/static/css/main.a00fab0b.chunk.css.map",
+    "static/js/2.c46ac76d.chunk.js.LICENSE.txt": "/BBC-article-ranker/static/js/2.c46ac76d.chunk.js.LICENSE.txt",
+    "static/media/green_tick.png": "/BBC-article-ranker/static/media/green_tick.e1f0bf09.png",
+    "static/media/logo.png": "/BBC-article-ranker/static/media/logo.0229c364.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cc9a0d80.js",
+    "static/js/2.c46ac76d.chunk.js",
+    "static/css/main.a00fab0b.chunk.css",
+    "static/js/main.4b7808ab.chunk.js"
+  ]
+}
