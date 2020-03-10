@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
-import '../css/article.css'
-
 import data from '../data.json'
 
 export class Article extends Component {
@@ -62,7 +60,7 @@ export class Article extends Component {
     render() {
         let article = data[this.props.match.params.id]
         return (
-            <div className="container-fluid article">
+            <div className="container-fluid page-width">
                 <h1>{article.title}</h1>
                 {this.parseBody(article.body)}
                 <Link className="btn btn-primary" to="/">Return</Link>

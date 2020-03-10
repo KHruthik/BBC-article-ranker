@@ -60,8 +60,8 @@ export class App extends Component {
         <div>
           <Header />
           <Route exact path="/" render= {props =>(
-            <div className="container-fluid main-area">
-              <main>
+            <div className="container-fluid page-width">
+              <main className="flexbox cards-section">
                 { this.generateCards(data)}
               </main>
               <button className="btn btn-primary rank-button" onClick={this.goToRankPage}>Rank articles</button>

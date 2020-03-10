@@ -11,6 +11,16 @@ p {
   font-size: 15px;
 }
 
+.page-width {
+  max-width: 1000px;
+  margin-bottom: 30px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

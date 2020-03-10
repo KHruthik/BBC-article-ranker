@@ -59,7 +59,7 @@ export class ArticleRanker extends Component {
 
     render() {
         return (
-            <main className="container-fluid flex-container">
+            <main className="container-fluid page-width">
                 <p>Please rank the article in order of most interesting. (1 meaning most interesting and {data.length} meaning least interesting)</p>
                 <table id="ranking-structure">
                     {this.createArticleRanker()}
