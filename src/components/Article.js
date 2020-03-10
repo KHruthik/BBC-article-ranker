@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
+import '../css/article.css'
+
 import data from '../data.json'
 
 export class Article extends Component {
@@ -38,7 +40,7 @@ export class Article extends Component {
     }
 
     parseImage = (img) => {
-        return <img src={img.url} height={img.height} width={img.width} alt={img.altText}/>
+        return <img className="image-margin" src={img.url} height={img.height} width={img.width} alt={img.altText}/>
     }
 
     parseList = (list) => {
