@@ -6,7 +6,7 @@ import Article from './components/Article.js'
 import ArticleCard from './components/ArticleCard.js'
 import ArticleRanker from './components/ArticleRanker.js'
 import Message from './components/Message.js'
-import './app.css'
+import './css/app.css'
 
 import data from './data.json'
 
