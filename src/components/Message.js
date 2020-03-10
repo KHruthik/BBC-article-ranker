@@ -1,6 +1,6 @@
 import React from 'react'
 
-import tick from './green_tick.png'
+import tick from '../images/green_tick.png'
 
 export default function Message({match}) {
     if (match.params.success == 1) {

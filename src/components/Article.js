@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
-import './article.css'
+import '../css/article.css'
 
 import data from '../data.json'
 

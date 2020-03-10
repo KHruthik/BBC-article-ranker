@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 
-import './articleCard.css'
+import '../css/articleCard.css'
 
 export class ArticleCard extends Component {
 

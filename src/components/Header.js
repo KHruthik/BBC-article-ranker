@@ -1,6 +1,9 @@
 import React from 'react'
-import logo from './logo.png'
-import './header.css'
+
+import logo from '../images/logo.png'
+
+import '../css/header.css'
+
 export default function Header() {
     return (
         <header>
