@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/BBC-article-ranker/static/css/main.a00fab0b.chunk.css",
-    "main.js": "/BBC-article-ranker/static/js/main.930aaeb9.chunk.js",
-    "main.js.map": "/BBC-article-ranker/static/js/main.930aaeb9.chunk.js.map",
+    "main.js": "/BBC-article-ranker/static/js/main.54108718.chunk.js",
+    "main.js.map": "/BBC-article-ranker/static/js/main.54108718.chunk.js.map",
     "runtime-main.js": "/BBC-article-ranker/static/js/runtime-main.cc9a0d80.js",
     "runtime-main.js.map": "/BBC-article-ranker/static/js/runtime-main.cc9a0d80.js.map",
     "static/js/2.65058502.chunk.js": "/BBC-article-ranker/static/js/2.65058502.chunk.js",
     "static/js/2.65058502.chunk.js.map": "/BBC-article-ranker/static/js/2.65058502.chunk.js.map",
     "index.html": "/BBC-article-ranker/index.html",
-    "precache-manifest.5d8e13344f1c0f3b0b0fa6a4b1b8c98c.js": "/BBC-article-ranker/precache-manifest.5d8e13344f1c0f3b0b0fa6a4b1b8c98c.js",
+    "precache-manifest.2b3ca76d0bccf87fe8767a6a969f6cb3.js": "/BBC-article-ranker/precache-manifest.2b3ca76d0bccf87fe8767a6a969f6cb3.js",
     "service-worker.js": "/BBC-article-ranker/service-worker.js",
     "static/css/main.a00fab0b.chunk.css.map": "/BBC-article-ranker/static/css/main.a00fab0b.chunk.css.map",
     "static/js/2.65058502.chunk.js.LICENSE.txt": "/BBC-article-ranker/static/js/2.65058502.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.cc9a0d80.js",
     "static/js/2.65058502.chunk.js",
     "static/css/main.a00fab0b.chunk.css",
-    "static/js/main.930aaeb9.chunk.js"
+    "static/js/main.54108718.chunk.js"
   ]
 }
