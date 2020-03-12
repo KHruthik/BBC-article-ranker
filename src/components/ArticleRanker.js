@@ -8,18 +8,20 @@ import data from '../data.json'
 export class ArticleRanker extends Component {
 
     state = {
-        redirect: false
+        redirect: false,
+        success: 0
     }
 
-    setRedirect = () => {
+    setRedirect = (message) => {
         this.setState({
-          redirect: true
+          redirect: true,
+          success: message
         })
       }
       
     renderRedirect = () => {
     if (this.state.redirect) {
-        return <Redirect to='/message/1' />
+        return <Redirect to={'/message/'.concat(this.state.success)} />
     }
   }
 
@@ -67,7 +69,7 @@ export class ArticleRanker extends Component {
 
     submitResponse = () => {
         if (!this.hasDuplicates(this.getResponses())) {
-            this.setRedirect()
+            this.setRedirect(1)
         }else {
             alert("Please choose unique values for each box")
         }
