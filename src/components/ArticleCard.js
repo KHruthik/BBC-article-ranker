@@ -9,7 +9,7 @@ export class ArticleCard extends Component {
     render() {
         return (
             <div className="card card-width align-text-center card-margin shadow rounded">
-                <img src={this.props.src} className="card-width"/>
+                <img src={this.props.src} className="card-width" alt={this.props.altImage}/>
                 <div className="card-body">
                     <h5 className="card-title">{this.props.title}</h5>
                     <br/>
@@ -24,6 +24,7 @@ ArticleCard.propTypes = {
     id: PropTypes.number,
     title: PropTypes.string,
     src: PropTypes.string,
+    altText: PropTypes.string,
     visit: PropTypes.func
 }
 

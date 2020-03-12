@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
 
 import '../css/articleRanker.css'
 
@@ -12,7 +11,7 @@ export class ArticleRanker extends Component {
     }
 
     getTitleOptionElms = (titles) => {
-        return titles.map(title => <option value={title}>{title}</option>)
+        return titles.map(title => <option key={title} value={title}>{title}</option>)
     }
 
     createArticleRanker = () => {
@@ -20,7 +19,7 @@ export class ArticleRanker extends Component {
         
         for(let i = 0; i < data.length; ++i) {
             tableRows.push(
-                <tr>
+                <tr key={i}>
                     <td>
                         <div className='number-box'>{i + 1}</div>
                     </td>
@@ -62,7 +61,9 @@ export class ArticleRanker extends Component {
             <main className="container-fluid page-width">
                 <p>Please rank the article in order of most interesting. (1 meaning most interesting and {data.length} meaning least interesting)</p>
                 <table id="ranking-structure">
-                    {this.createArticleRanker()}
+                    <tbody>
+                        {this.createArticleRanker()}
+                    </tbody>
                 </table>
                 <button className="btn btn-primary" onClick={this.submitResponse}>Submit</button>
             </main>

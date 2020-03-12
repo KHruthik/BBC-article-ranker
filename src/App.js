@@ -30,7 +30,7 @@ export class App extends Component {
     if (data) {
       for (let i = 0; i < data.length; ++i) {
         if (data[i].type === "image") {
-          return data[i].model.url
+          return [data[i].model.url, data[i].model.altText]
         }
       }
     }
@@ -41,7 +41,7 @@ export class App extends Component {
     for(let i = 0; i < data.length; ++i) {
         let title = this.getTitle(data[i])
         let image = this.getImage(data[i].body)
-        cards.push(<ArticleCard visit={this.visitPage} id={i} src={image} title={title}/>)
+        cards.push(<ArticleCard visit={this.visitPage} key={i} id={i} src={image[0]} altText={image[1]} title={title}/>)
     }
     return cards
   }

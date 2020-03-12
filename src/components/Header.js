@@ -7,7 +7,7 @@ import '../css/header.css'
 export default function Header() {
     return (
         <header>
-            <img src={logo} id="logo"/>
+            <img src={logo} id="logo" alt="logo"/>
         </header>
     )
 }

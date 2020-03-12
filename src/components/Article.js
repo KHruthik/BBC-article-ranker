@@ -12,48 +12,51 @@ export class Article extends Component {
     }
 
     parseBody = (body) => {
-        return body.map(tag =>  {
+        let bodyElements = []
+        for(let i = 0; i < body.length; ++i) {
+            let tag = body[i]
             if (tag.type === 'paragraph') {
-                return this.parseParagraph(tag.model)
+                bodyElements.push(this.parseParagraph(tag.model, i))
 
             }else if (tag.type === 'heading') {
-                return this.parseHeading(tag.model)
+                bodyElements.push(this.parseHeading(tag.model, i))
 
             }else if (tag.type === 'image') {
-                return this.parseImage(tag.model)
+                bodyElements.push(this.parseImage(tag.model, i))
 
             }else if (tag.type === 'list') {
-                return this.parseList(tag.model)
+                bodyElements.push(this.parseList(tag.model, i))
 
             }else {
-                return <h1>Error</h1>
+                bodyElements.push(<h1>Error</h1>)
             }
-        })
+        }
+        return bodyElements
     }
 
-    parseParagraph = (p) => {
-        return <p>{p.text}</p>
+    parseParagraph = (p, index) => {
+        return <p key={index}>{p.text}</p>
     }
 
-    parseHeading = (h) => {
-        return <h2>{h.text}</h2>
+    parseHeading = (h, index) => {
+        return <h2 key={index}>{h.text}</h2>
     }
 
-    parseImage = (img) => {
-        return <img className="image-margin" src={img.url} height={img.height} width={img.width} alt={img.altText}/>
+    parseImage = (img, index) => {
+        return <img key={index} className="image-margin" src={img.url} height={img.height} width={img.width} alt={img.altText}/>
     }
 
-    parseList = (list) => {
-        if (list.type == 'unordered') {
+    parseList = (list, index) => {
+        if (list.type === 'unordered') {
             return (
-                <ul>
-                    {list.items.map(item => <li>{item}</li>)}
+                <ul key={index}>
+                    {list.items.map(item => <li key={item}>{item}</li>)}
                 </ul>
             )
         }else {
             return (
-                <ol>
-                    {list.items.map(item => <li>{item}</li>)}
+                <ol key={index}>
+                    {list.items.map(item => <li key={item}>{item}</li>)}
                 </ol>
             )
         }
