@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a2f77f4ad078573e19e1197835a6814d",
+    "revision": "dbb5a2886d7a7371e83db35c7aa213f1",
     "url": "/BBC-article-ranker/index.html"
   },
   {
-    "revision": "1705e6979c92da9cd4e2",
+    "revision": "3ad7d1340f22ebb523de",
     "url": "/BBC-article-ranker/static/css/main.a00fab0b.chunk.css"
   },
   {
-    "revision": "5d18ea765b4b066211e8",
-    "url": "/BBC-article-ranker/static/js/2.c46ac76d.chunk.js"
+    "revision": "770b3476ef24d4ec26fa",
+    "url": "/BBC-article-ranker/static/js/2.65058502.chunk.js"
   },
   {
     "revision": "f231859d6585c4cd5f80c344783ed269",
-    "url": "/BBC-article-ranker/static/js/2.c46ac76d.chunk.js.LICENSE.txt"
+    "url": "/BBC-article-ranker/static/js/2.65058502.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1705e6979c92da9cd4e2",
-    "url": "/BBC-article-ranker/static/js/main.4b7808ab.chunk.js"
+    "revision": "3ad7d1340f22ebb523de",
+    "url": "/BBC-article-ranker/static/js/main.a0e68d77.chunk.js"
   },
   {
     "revision": "22103d19a767a4202da9",
