@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/BBC-article-ranker/precache-manifest.1996a90deb9e05f3d0b1397b7bfa63e4.js"
+  "/BBC-article-ranker/precache-manifest.5d8e13344f1c0f3b0b0fa6a4b1b8c98c.js"
 );
 
 self.addEventListener('message', (event) => {
