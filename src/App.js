@@ -56,7 +56,7 @@ export class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename='/'>
         <div>
           <Header />
           <Route exact path="/" render= {props =>(
