@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 
 import Header from './components/Header.js'
 import Article from './components/Article.js'
@@ -14,7 +14,20 @@ import data from './data.json'
 export class App extends Component {
 
   state = {
-    numOfArticlesVisited: 0
+    numOfArticlesVisited: 0,
+    redirect: false
+  }
+
+  setRedirect = () => {
+    this.setState({
+      redirect: true
+    })
+  }
+  
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/rank' />
+    }
   }
 
   
@@ -48,7 +61,7 @@ export class App extends Component {
 
   goToRankPage = () => {
     if (this.state.numOfArticlesVisited >= data.length) {
-      window.location.replace("/rank")
+      this.setRedirect()
     }else {
       alert("Please read all the articles before ranking")
     }
@@ -59,17 +72,21 @@ export class App extends Component {
       <Router basename={process.env.PUBLIC_URL}>
         <div>
           <Header />
-          <Route exact path="/" render= {props =>(
-            <div className="container-fluid page-width">
-              <main className="flexbox cards-section">
-                { this.generateCards(data)}
-              </main>
-              <button className="btn btn-primary rank-button" onClick={this.goToRankPage}>Rank articles</button>
-            </div>
-          )} />
-          <Route path="/article/:id" component={Article} />
-          <Route path="/rank" component={ArticleRanker} />
-          <Route path="/message/:success" component={Message} />
+          <Switch>
+            <Route exact path="/" render= {props =>(
+              <div className="container-fluid page-width">
+                <main className="flexbox cards-section">
+                  { this.generateCards(data)}
+                </main>
+                {this.renderRedirect()}
+                <button className="btn btn-primary rank-button" onClick={this.goToRankPage}>Rank articles</button>
+              </div>
+            )} />
+            <Route path="/rank/" component={ArticleRanker} />
+            <Route path="/article/:id/" component={Article} />
+            <Route path="/message/:success/" component={Message} />
+          </Switch>
+          
         </div>
       </Router>
     )
@@ -77,6 +94,7 @@ export class App extends Component {
 
 
 }
+
 
 export default App
 

@@ -1,10 +1,27 @@
 import React, { Component } from 'react'
+import {Redirect} from 'react-router-dom'
 
 import '../css/articleRanker.css'
 
 import data from '../data.json'
 
 export class ArticleRanker extends Component {
+
+    state = {
+        redirect: false
+    }
+
+    setRedirect = () => {
+        this.setState({
+          redirect: true
+        })
+      }
+      
+    renderRedirect = () => {
+    if (this.state.redirect) {
+        return <Redirect to='/message/1' />
+    }
+  }
 
     getTitles = () => {
         return data.map(article => article.title)
@@ -50,7 +67,7 @@ export class ArticleRanker extends Component {
 
     submitResponse = () => {
         if (!this.hasDuplicates(this.getResponses())) {
-            window.location.replace('/message/1')
+            this.setRedirect()
         }else {
             alert("Please choose unique values for each box")
         }
@@ -65,6 +82,7 @@ export class ArticleRanker extends Component {
                         {this.createArticleRanker()}
                     </tbody>
                 </table>
+                {this.renderRedirect()}
                 <button className="btn btn-primary" onClick={this.submitResponse}>Submit</button>
             </main>
         )
