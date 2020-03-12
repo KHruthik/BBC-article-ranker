@@ -56,7 +56,7 @@ export class App extends Component {
 
   render() {
     return (
-      <Router basename='/'>
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
           <Header />
           <Route exact path="/" render= {props =>(
